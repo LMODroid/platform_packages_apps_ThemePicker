@@ -23,8 +23,9 @@
     <FrameLayout
         android:id="@+id/theme_preview_card_body_container"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/preview_theme_content_max_height"
-        android:layout_marginTop="@dimen/preview_theme_content_margin"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/section_vertical_padding"
+        android:background="@drawable/wallpaper_section_background"
         android:clipChildren="false"
         android:importantForAccessibility="noHideDescendants">
 
