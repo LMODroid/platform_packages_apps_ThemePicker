@@ -26,4 +26,7 @@
 
     <!-- System Fonts section -->
     <string name="font_title">System Fonts</string>
+
+    <!-- System Icon Shape section -->
+    <string name="icon_shape_title">System Icon Shape</string>
 </resources>

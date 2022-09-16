@@ -285,6 +285,7 @@ public class OptionSelectorController<T extends CustomizationOption<T>> {
         }
 
         mContainer.setAdapter(mAdapter);
+        mContainer.setItemAnimator(null);
 
         // Measure RecyclerView to get to the total amount of space used by all options.
         mContainer.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
