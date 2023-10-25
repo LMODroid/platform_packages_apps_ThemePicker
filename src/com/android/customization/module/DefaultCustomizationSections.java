@@ -23,6 +23,7 @@ import com.android.customization.model.themedicon.ThemedIconSectionController;
 import com.android.customization.model.themedicon.ThemedIconSwitchProvider;
 import com.android.customization.model.themedicon.domain.interactor.ThemedIconInteractor;
 import com.android.customization.model.themedicon.domain.interactor.ThemedIconSnapshotRestorer;
+import com.android.customization.model.udfps.UdfpsAnimationSectionController;
 import com.android.customization.picker.clock.ui.view.ClockViewFactory;
 import com.android.customization.picker.clock.ui.viewmodel.ClockCarouselViewModel;
 import com.android.customization.picker.color.ui.section.ColorSectionController2;
@@ -240,6 +241,9 @@ public final class DefaultCustomizationSections implements CustomizationSections
                 mThemedIconInteractor,
                 savedInstanceState,
                 mThemedIconSnapshotRestorer));
+
+        // Udfps animation selection section
+        sectionControllers.add(new UdfpsAnimationSectionController(sectionNavigationController));
 
         // App grid section.
         sectionControllers.add(
