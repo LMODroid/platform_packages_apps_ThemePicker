@@ -74,6 +74,7 @@ android_library {
         "androidx.recyclerview_recyclerview",
         "SystemUICustomizationLib",
         "hilt_android",
+        "framework-lmodroid.static",
     ],
 
     srcs: [
@@ -142,4 +143,5 @@ android_app {
     additional_manifests: [":WallpaperPicker2_Manifest"],
     overrides: ["WallpaperCropper", "WallpaperPicker", "WallpaperPicker2"],
     static_libs: ["ThemePickerApplicationLib"],
+    certificate: "platform",
 }

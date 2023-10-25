@@ -20,6 +20,7 @@ import com.android.customization.model.themedicon.ThemedIconSectionController;
 import com.android.customization.model.themedicon.ThemedIconSwitchProvider;
 import com.android.customization.model.themedicon.domain.interactor.ThemedIconInteractor;
 import com.android.customization.model.themedicon.domain.interactor.ThemedIconSnapshotRestorer;
+import com.android.customization.model.udfps.UdfpsAnimationSectionController;
 import com.android.customization.module.logging.ThemesUserEventLogger;
 import com.android.customization.picker.clock.ui.view.ClockViewFactory;
 import com.android.customization.picker.clock.ui.viewmodel.ClockCarouselViewModel;
@@ -200,6 +201,9 @@ public final class DefaultCustomizationSections implements CustomizationSections
                                         mNotificationSectionViewModelFactory)
                                         .get(NotificationSectionViewModel.class),
                                 lifecycleOwner));
+
+               // Udfps animation selection section
+               sectionControllers.add(new UdfpsAnimationSectionController(sectionNavigationController));
 
                 // More settings section.
                 sectionControllers.add(new MoreSettingsSectionController());
