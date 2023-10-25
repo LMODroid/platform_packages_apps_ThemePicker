@@ -83,6 +83,7 @@ java_defaults {
         "androidx.recyclerview_recyclerview",
         "SystemUICustomizationLib",
         "hilt_android",
+        "framework-lmodroid.static",
     ],
 
     jni_libs: [
