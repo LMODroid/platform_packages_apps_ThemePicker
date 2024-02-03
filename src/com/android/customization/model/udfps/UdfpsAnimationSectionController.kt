@@ -18,6 +18,7 @@ package com.android.customization.model.udfps
 
 import android.content.Context
 import android.content.pm.PackageManager
+import android.hardware.fingerprint.FingerprintManager
 import android.view.LayoutInflater
 
 import com.android.customization.picker.udfps.UdfpsAnimationFragment
@@ -51,8 +52,17 @@ class UdfpsAnimationSectionController(
     }
 
     private fun isUdfpsAvailable(context: Context): Boolean {
-        return context.resources.getIntArray(
-                com.android.internal.R.array.config_udfps_sensor_props).isNotEmpty()
+        val hasFingerprint = context.packageManager
+                .hasSystemFeature(PackageManager.FEATURE_FINGERPRINT)
+        return if (hasFingerprint) {
+            val fingerprintManger =
+                    context.getSystemService(Context.FINGERPRINT_SERVICE) as FingerprintManager
+            val udfpsProps =
+                    fingerprintManger.getSensorPropertiesInternal().filter { it.isAnyUdfpsType() }
+            udfpsProps.isNotEmpty() // return
+        } else {
+            false
+        }
     }
 
     private fun isUdfpsAnimationPackageInstalled(context: Context): Boolean {

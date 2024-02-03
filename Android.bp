@@ -126,6 +126,7 @@ android_app {
     required: [
         "privapp_whitelist_com.android.wallpaper"
     ],
+    certificate: "platform",
 }
 
 prebuilt_etc {
