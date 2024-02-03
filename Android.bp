@@ -130,4 +130,5 @@ android_app {
     manifest: "AndroidManifest.xml",
     additional_manifests: [":WallpaperPicker2_Manifest"],
     overrides: ["WallpaperCropper", "WallpaperPicker", "WallpaperPicker2"],
+    certificate: "platform",
 }
