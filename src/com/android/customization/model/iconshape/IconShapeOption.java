@@ -46,7 +46,7 @@ import java.util.Objects;
 
 public class IconShapeOption implements CustomizationOption<IconShapeOption> {
 
-    private final LayerDrawable mShape;
+    private final Drawable mShape;
     private final List<ShapeAppIcon> mAppIcons;
     private final String mTitle;
     private final String mOverlayPackage;
@@ -65,39 +65,21 @@ public class IconShapeOption implements CustomizationOption<IconShapeOption> {
         mAppIcons = appIcons;
         mPath = path;
         mCornerRadius = cornerRadius;
-        Drawable background = shapeDrawable.getConstantState().newDrawable();
-        Drawable foreground = shapeDrawable.getConstantState().newDrawable();
-        mShape = new LayerDrawable(new Drawable[]{background, foreground});
-        mShape.setLayerGravity(0, Gravity.CENTER);
-        mShape.setLayerGravity(1, Gravity.CENTER);
+        mShape = shapeDrawable.getConstantState().newDrawable();
     }
 
     @Override
     public void bindThumbnailTile(View view) {
-        Resources res = view.getContext().getResources();
         int resId = R.id.icon_section_tile;
+        boolean isSectionView = true;
         if (view.findViewById(R.id.shape_thumbnail) != null) {
             resId = R.id.shape_thumbnail;
+            isSectionView = false;
         }
 
-        Resources.Theme theme = view.getContext().getTheme();
-        int borderWidth = 2 * res.getDimensionPixelSize(R.dimen.option_border_width);
-
-        Drawable background = mShape.getDrawable(0);
-        background.setTintList(res.getColorStateList(R.color.option_border_color, theme));
-
-        ShapeDrawable foreground = (ShapeDrawable) mShape.getDrawable(1);
-
-        foreground.setIntrinsicHeight(background.getIntrinsicHeight() - borderWidth);
-        foreground.setIntrinsicWidth(background.getIntrinsicWidth() - borderWidth);
-        TypedArray ta = view.getContext().obtainStyledAttributes(
-                new int[]{android.R.attr.colorPrimary});
-        int primaryColor = ta.getColor(0, 0);
-        ta.recycle();
-        int foregroundColor =
-                ResourceUtils.getColorAttr(view.getContext(), android.R.attr.textColorPrimary);
-
-        foreground.setTint(ColorUtils.blendARGB(primaryColor, foregroundColor, .05f));
+        mShape.setTint(view.getContext().getResources().getColor(
+                view.isActivated() || isSectionView ? R.color.system_on_surface
+                : R.color.system_on_surface_variant));
 
         ((ImageView) view.findViewById(resId)).setImageDrawable(mShape);
         view.setContentDescription(mTitle);

@@ -75,14 +75,15 @@ public class IconPackOption implements CustomizationOption<IconPackOption> {
         Resources res = view.getContext().getResources();
         Drawable icon = mIcons.get(THUMBNAIL_ICON_POSITION)
                 .getConstantState().newDrawable().mutate();
-        int colorFilter = ResourceUtils.getColorAttr(view.getContext(),
-                android.R.attr.textColorPrimary);
         int resId = R.id.icon_section_tile;
+        int colorFilter = view.getContext().getResources().getColor(
+                R.color.system_on_surface);
         if (view.findViewById(R.id.option_icon) != null) {
             resId = R.id.option_icon;
-            colorFilter = ResourceUtils.getColorAttr(view.getContext(),
-                view.isActivated() ? android.R.attr.textColorPrimary :
-                android.R.attr.textColorTertiary);
+            colorFilter = view.getContext().getResources().getColor(
+                    view.isActivated()
+                            ? R.color.system_on_surface
+                            : R.color.system_on_surface_variant);
         }
         icon.setColorFilter(colorFilter, Mode.SRC_ATOP);
         ((ImageView) view.findViewById(resId)).setImageDrawable(icon);
