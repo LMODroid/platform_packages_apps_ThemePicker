@@ -18,16 +18,18 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:orientation="vertical">
+
     <FrameLayout
         android:id="@+id/option_tile"
         android:layout_width="@dimen/option_tile_width"
         android:layout_height="@dimen/option_tile_width"
         android:layout_gravity="center"
-        android:layout_marginHorizontal="@dimen/component_options_margin_horizontal">
+        android:layout_marginHorizontal="@dimen/component_options_margin_horizontal"
+        android:background="@drawable/option_border_custom">
         <ImageView
             android:id="@+id/shape_thumbnail"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
             android:layout_gravity="center"/>
     </FrameLayout>
 
@@ -38,7 +40,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/theme_option_label_margin"
         android:gravity="center"
-        android:textAppearance="@style/OptionTitleTextAppearance"
+        android:textColor="@color/system_on_surface"
         android:singleLine="true"
         android:scrollHorizontally="true"
         android:focusable="true"

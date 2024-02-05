@@ -27,7 +27,7 @@
         android:paddingHorizontal="@dimen/option_tile_padding_horizontal"
         android:paddingVertical="@dimen/option_tile_padding_vertical"
         android:layout_marginHorizontal="@dimen/component_options_margin_horizontal"
-        android:background="@drawable/option_border">
+        android:background="@drawable/option_border_custom">
         <TextView
             android:id="@+id/thumbnail_text"
             android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
             android:layout_gravity="center"
             android:textSize="@dimen/font_comonent_option_thumbnail_size"
             android:textAlignment="center"
-            android:textColor="?android:attr/colorForeground"
+            android:textColor="@color/system_on_surface"
             android:text="@string/font_component_option_thumbnail"/>
     </FrameLayout>
 
@@ -46,7 +46,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/theme_option_label_margin"
         android:gravity="center"
-        android:textAppearance="@style/OptionTitleTextAppearance"
+        android:textColor="@color/system_on_surface"
         android:singleLine="true"
         android:scrollHorizontally="true"
         android:focusable="true"
