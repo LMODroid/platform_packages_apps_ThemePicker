@@ -42,7 +42,7 @@
             android:layout_gravity="center"
             android:textSize="@dimen/font_comonent_option_thumbnail_size"
             android:textAlignment="center"
-            android:textColor="?android:attr/colorForeground"
+            android:textColor="@color/system_on_surface"
             android:text="@string/font_component_option_thumbnail"/>
     </FrameLayout>
 

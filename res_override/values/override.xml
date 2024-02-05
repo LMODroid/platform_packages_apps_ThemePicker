@@ -41,4 +41,11 @@
         <item>com.android.dialer</item>
         <item>org.lineageos.glimpse</item>
     </array>
+
+    <!-- Dynamic colors -->
+    <style name="CustomizationTheme">
+        <item name="android:colorBackground">@color/system_surface_container</item>
+    </style>
+
+    <color name="toolbar_color">@color/system_surface_container</color>
 </resources>

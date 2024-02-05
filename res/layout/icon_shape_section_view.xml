@@ -36,11 +36,12 @@
         android:layout_gravity="center_horizontal"
         android:paddingHorizontal="@dimen/option_tile_padding_horizontal"
         android:paddingVertical="@dimen/option_tile_padding_vertical"
+        android:tint="@color/system_on_surface"
         android:background="@drawable/picker_section_icon_background">
         <ImageView
             android:id="@+id/icon_section_tile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/component_icon_thumb_size"
+            android:layout_height="@dimen/component_icon_thumb_size"
             android:layout_gravity="center"/>
     </FrameLayout>
 
