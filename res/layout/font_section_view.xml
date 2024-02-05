@@ -32,7 +32,7 @@
         android:layout_width="@dimen/option_tile_width"
         android:layout_height="@dimen/option_tile_width"
         android:scaleType="center"
-        android:background="@drawable/option_border_color">
+        android:background="@drawable/picker_section_icon_background">
         <TextView
             android:id="@+id/thumbnail_text"
             android:layout_width="wrap_content"
@@ -40,7 +40,7 @@
             android:layout_gravity="center"
             android:textSize="@dimen/font_comonent_option_thumbnail_size"
             android:textAlignment="center"
-            android:textColor="?android:attr/colorForeground"
+            android:textColor="@color/system_on_surface"
             android:text="@string/font_component_option_thumbnail"/>
     </FrameLayout>
 
