@@ -17,7 +17,6 @@
 
 package com.android.customization.model.picker.quickaffordance.domain.interactor
 
-import androidx.test.core.app.ApplicationProvider
 import androidx.test.filters.SmallTest
 import com.android.customization.picker.quickaffordance.data.repository.KeyguardQuickAffordancePickerRepository
 import com.android.customization.picker.quickaffordance.domain.interactor.KeyguardQuickAffordancePickerInteractor
@@ -25,7 +24,6 @@ import com.android.customization.picker.quickaffordance.domain.interactor.Keygua
 import com.android.customization.picker.quickaffordance.shared.model.KeyguardQuickAffordancePickerSelectionModel
 import com.android.systemui.shared.customization.data.content.FakeCustomizationProviderClient
 import com.android.systemui.shared.keyguard.shared.model.KeyguardQuickAffordanceSlots
-import com.android.wallpaper.config.BaseFlags
 import com.android.wallpaper.testing.FakeSnapshotStore
 import com.android.wallpaper.testing.collectLastValue
 import com.google.common.truth.Truth.assertThat
@@ -66,8 +64,6 @@ class KeyguardQuickAffordancePickerInteractorTest {
                     KeyguardQuickAffordancePickerRepository(
                         client = client,
                         scope = testScope.backgroundScope,
-                        flags = testFlags,
-                        context = ApplicationProvider.getApplicationContext(),
                     ),
                 client = client,
                 snapshotRestorer = {
@@ -137,7 +133,7 @@ class KeyguardQuickAffordancePickerInteractorTest {
                 affordanceId = FakeCustomizationProviderClient.AFFORDANCE_3,
             )
 
-            underTest.unselectAll(
+            underTest.unselectAllFromSlot(
                 slotId = KeyguardQuickAffordanceSlots.SLOT_ID_BOTTOM_END,
             )
 
