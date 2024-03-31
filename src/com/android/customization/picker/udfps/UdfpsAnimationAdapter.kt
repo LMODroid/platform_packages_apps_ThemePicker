@@ -107,8 +107,8 @@ class UdfpsAnimationAdapter private constructor(
         private val adapter: UdfpsAnimationAdapter
     ) : RecyclerView.ViewHolder(rootView) {
 
-        private val title: TextView by lazy { itemView.findViewById(R.id.option_label) }
-        private val image: ImageView by lazy { itemView.findViewById(R.id.option_thumbnail) }
+        private val title: TextView by lazy { itemView.requireViewById(R.id.option_label) }
+        private val image: ImageView by lazy { itemView.requireViewById(R.id.option_thumbnail) }
 
         fun bind() {
             val animIndex = adapterPosition

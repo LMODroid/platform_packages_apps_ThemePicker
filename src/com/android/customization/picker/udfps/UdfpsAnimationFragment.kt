@@ -40,7 +40,7 @@ class UdfpsAnimationFragment : AppbarFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
+        val recyclerView = view.requireViewById<RecyclerView>(R.id.recycler_view)
         val animationPackage = getString(
                 com.android.internal.R.string.config_udfps_animation_customization_package)
         val udfpsAnimationAdapter = UdfpsAnimationAdapter.from(requireContext(), animationPackage)
