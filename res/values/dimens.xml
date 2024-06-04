@@ -213,4 +213,8 @@
     <dimen name="clock_axis_control_slider_row_margin_vertical">10dp</dimen>
     <dimen name="clock_axis_control_switch_row_margin_vertical">8dp</dimen>
     <dimen name="clock_font_apply_padding_start">8dp</dimen>
+
+    <!-- preview page -->
+    <dimen name="preview_page_top_margin">16dp</dimen>
+    <dimen name="preview_page_bottom_margin">16dp</dimen>
 </resources>
