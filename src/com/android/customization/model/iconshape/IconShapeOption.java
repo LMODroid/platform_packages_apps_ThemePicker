@@ -51,20 +51,17 @@ public class IconShapeOption implements CustomizationOption<IconShapeOption> {
     private final String mTitle;
     private final String mOverlayPackage;
     private final Path mPath;
-    private final int mCornerRadius;
     private int[] mShapeIconIds = {
             R.id.shape_preview_icon_0, R.id.shape_preview_icon_1, R.id.shape_preview_icon_2,
             R.id.shape_preview_icon_3, R.id.shape_preview_icon_4, R.id.shape_preview_icon_5
     };
 
     public IconShapeOption(String packageName, String title, Path path,
-                           @Dimension int cornerRadius, Drawable shapeDrawable,
-                           List<ShapeAppIcon> appIcons) {
+                           Drawable shapeDrawable, List<ShapeAppIcon> appIcons) {
         mOverlayPackage = packageName;
         mTitle = title;
         mAppIcons = appIcons;
         mPath = path;
-        mCornerRadius = cornerRadius;
         mShape = shapeDrawable.getConstantState().newDrawable();
     }
 
