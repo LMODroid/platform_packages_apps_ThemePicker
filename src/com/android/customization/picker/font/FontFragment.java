@@ -33,17 +33,16 @@ import androidx.transition.Transition;
 import com.android.customization.model.CustomizationManager.Callback;
 import com.android.customization.model.CustomizationManager.OptionsFetchedListener;
 import com.android.customization.model.CustomizationOption;
+import com.android.customization.model.font.FontOption;
+import com.android.customization.model.font.FontManager;
 import com.android.customization.model.theme.OverlayManagerCompat;
 import com.android.customization.module.logging.ThemesUserEventLogger;
 import com.android.customization.picker.WallpaperPreviewer;
 import com.android.customization.widget.OptionSelectorController;
 import com.android.customization.widget.OptionSelectorController.CheckmarkStyle;
-import com.android.wallpaper.R;
+import com.android.themepicker.R;
 import com.android.wallpaper.picker.AppbarFragment;
 import com.android.wallpaper.widget.BottomActionBar;
-
-import com.android.customization.model.font.FontOption;
-import com.android.customization.model.font.FontManager;
 
 import java.util.List;
 

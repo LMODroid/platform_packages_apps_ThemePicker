@@ -37,7 +37,7 @@ import com.android.customization.model.iconshape.IconShapeManager;
 import com.android.customization.model.theme.OverlayManagerCompat;
 import com.android.customization.widget.OptionSelectorController;
 import com.android.customization.widget.OptionSelectorController.CheckmarkStyle;
-import com.android.wallpaper.R;
+import com.android.themepicker.R;
 import com.android.wallpaper.picker.AppbarFragment;
 import com.android.wallpaper.widget.BottomActionBar;
 

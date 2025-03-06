@@ -33,13 +33,12 @@ import android.widget.ImageView;
 
 import androidx.core.graphics.ColorUtils;
 
-import com.android.customization.model.theme.ShapeAppIcon;
-import com.android.wallpaper.R;
-import com.android.wallpaper.util.ResourceUtils;
-
 import com.android.customization.model.CustomizationManager;
 import com.android.customization.model.CustomizationOption;
 import com.android.customization.model.theme.OverlayManagerCompat;
+import com.android.customization.model.theme.ShapeAppIcon;
+import com.android.themepicker.R;
+import com.android.wallpaper.util.ResourceUtils;
 
 import java.util.List;
 import java.util.Objects;

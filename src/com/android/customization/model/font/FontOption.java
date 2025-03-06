@@ -25,13 +25,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.wallpaper.R;
-import com.android.wallpaper.util.ResourceUtils;
-
 import com.android.customization.model.CustomizationManager;
 import com.android.customization.model.CustomizationOption;
 import com.android.customization.model.ResourceConstants;
 import com.android.customization.model.theme.OverlayManagerCompat;
+import com.android.themepicker.R;
+import com.android.wallpaper.util.ResourceUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -27,8 +27,7 @@ import com.android.customization.model.CustomizationManager.Callback;
 import com.android.customization.model.CustomizationManager.OptionsFetchedListener;
 import com.android.customization.picker.iconshape.IconShapeFragment;
 import com.android.customization.picker.iconshape.IconShapeSectionView;
-
-import com.android.wallpaper.R;
+import com.android.themepicker.R;
 import com.android.wallpaper.model.CustomizationSectionController;
 
 import java.util.List;

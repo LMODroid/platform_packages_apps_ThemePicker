@@ -27,15 +27,13 @@ import androidx.annotation.Nullable;
 import com.android.customization.model.CustomizationManager.Callback;
 import com.android.customization.model.CustomizationManager.OptionsFetchedListener;
 import com.android.customization.model.CustomizationOption;
-import com.android.customization.widget.OptionSelectorController;
-import com.android.customization.widget.OptionSelectorController.OptionSelectedListener;
-
-import com.android.wallpaper.R;
-import com.android.wallpaper.model.CustomizationSectionController;
-import com.android.wallpaper.util.LaunchUtils;
-
 import com.android.customization.picker.font.FontFragment;
 import com.android.customization.picker.font.FontSectionView;
+import com.android.customization.widget.OptionSelectorController;
+import com.android.customization.widget.OptionSelectorController.OptionSelectedListener;
+import com.android.themepicker.R;
+import com.android.wallpaper.model.CustomizationSectionController;
+import com.android.wallpaper.util.LaunchUtils;
 
 import java.util.List;
 

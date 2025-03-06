@@ -43,7 +43,7 @@ import androidx.recyclerview.widget.RecyclerViewAccessibilityDelegate;
 
 import com.android.customization.model.CustomizationManager;
 import com.android.customization.model.CustomizationOption;
-import com.android.wallpaper.R;
+import com.android.themepicker.R;
 
 import java.util.HashSet;
 import java.util.List;

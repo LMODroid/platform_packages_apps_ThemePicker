@@ -31,7 +31,7 @@ import android.util.Log;
 
 import com.android.customization.model.ResourceConstants;
 import com.android.customization.model.theme.OverlayManagerCompat;
-import com.android.wallpaper.R;
+import com.android.themepicker.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

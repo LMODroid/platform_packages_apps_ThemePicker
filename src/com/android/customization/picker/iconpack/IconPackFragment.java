@@ -40,7 +40,7 @@ import com.android.customization.module.logging.ThemesUserEventLogger;
 import com.android.customization.picker.WallpaperPreviewer;
 import com.android.customization.widget.OptionSelectorController;
 import com.android.customization.widget.OptionSelectorController.CheckmarkStyle;
-import com.android.wallpaper.R;
+import com.android.themepicker.R;
 import com.android.wallpaper.picker.AppbarFragment;
 import com.android.wallpaper.widget.BottomActionBar;
 
