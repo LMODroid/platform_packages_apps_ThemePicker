@@ -17,7 +17,6 @@
 package com.android.wallpaper.customization.ui.binder
 
 import android.content.Context
-import android.content.res.ColorStateList
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -140,7 +139,6 @@ object AppIconFloatingSheetBinder {
         val themedIconsSwitch = view.requireViewById<MaterialSwitch>(R.id.themed_icon_toggle)
         val themedIconEntry = view.requireViewById<ViewGroup>(R.id.themed_icon_toggle_entry)
         val themedIconTitle = view.requireViewById<TextView>(R.id.themed_icon_toggle_title)
-        val themedIconBetaLabel = view.requireViewById<TextView>(R.id.themed_icon_beta_title)
 
         data class FloatingSheetHeightsViewModel(
             val styleContentHeight: Int? = null,
@@ -295,7 +293,6 @@ object AppIconFloatingSheetBinder {
                             titleBinding =
                                 bindTitleColor(
                                     themedIconTitle,
-                                    themedIconBetaLabel,
                                     colorUpdateViewModel,
                                     isFloatingSheetActive,
                                     lifecycleOwner,
@@ -326,7 +323,6 @@ object AppIconFloatingSheetBinder {
 
     private fun bindTitleColor(
         title: TextView,
-        betaLabel: TextView,
         colorUpdateViewModel: ColorUpdateViewModel,
         shouldAnimateColor: () -> Boolean,
         lifecycleOwner: LifecycleOwner,
@@ -338,27 +334,9 @@ object AppIconFloatingSheetBinder {
                 shouldAnimate = shouldAnimateColor,
                 lifecycleOwner = lifecycleOwner,
             )
-        val labelBinding =
-            ColorUpdateBinder.bind(
-                setColor = { color -> betaLabel.setTextColor(color) },
-                color = colorUpdateViewModel.colorOnPrimaryContainer,
-                shouldAnimate = shouldAnimateColor,
-                lifecycleOwner = lifecycleOwner,
-            )
-        val labelBackgroundBinding =
-            ColorUpdateBinder.bind(
-                setColor = { color ->
-                    betaLabel.background.setTintList(ColorStateList.valueOf(color))
-                },
-                color = colorUpdateViewModel.colorPrimaryContainer,
-                shouldAnimate = shouldAnimateColor,
-                lifecycleOwner = lifecycleOwner,
-            )
         return object : ColorUpdateBinder.Binding {
             override fun destroy() {
                 titleBinding.destroy()
-                labelBinding.destroy()
-                labelBackgroundBinding.destroy()
             }
         }
     }
