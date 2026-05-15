@@ -188,10 +188,10 @@ public final class DefaultCustomizationSections implements CustomizationSections
                                         .get(KeyguardQuickAffordancePickerViewModel.class),
                                 lifecycleOwner));
 
-                // Icon pack selection section.
-                sectionControllers.add(new IconPackSectionController(
-                        IconPackManager.getInstance(activity, new OverlayManagerCompat(activity)),
-                        sectionNavigationController));
+                // // Icon pack selection section.
+                // sectionControllers.add(new IconPackSectionController(
+                //         IconPackManager.getInstance(activity, new OverlayManagerCompat(activity)),
+                //         sectionNavigationController));
 
                 // Font selection section.
                 sectionControllers.add(new FontSectionController(
@@ -235,10 +235,10 @@ public final class DefaultCustomizationSections implements CustomizationSections
                                 sectionNavigationController,
                                 lifecycleOwner));
 
-                // Icon pack selection section.
-                sectionControllers.add(new IconPackSectionController(
-                        IconPackManager.getInstance(activity, new OverlayManagerCompat(activity)),
-                        sectionNavigationController));
+                // // Icon pack selection section.
+                // sectionControllers.add(new IconPackSectionController(
+                //         IconPackManager.getInstance(activity, new OverlayManagerCompat(activity)),
+                //         sectionNavigationController));
 
                 // Font selection section.
                 sectionControllers.add(new FontSectionController(
